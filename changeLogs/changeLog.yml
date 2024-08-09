@@ -1,0 +1,21 @@
+name: Short description of change
+tag: PATCH
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Max
+      changes:
+        - sqlFile:
+            path: changeLogs/createSchema.sql
+  - changeSet:
+      id: 2
+      author: Max
+      changes:
+        - sqlFile:
+            path: changeLogs/createSeq.sql
+  - changeSet:
+      id: 3
+      author: Max
+      changes:
+        - sqlFile:
+            path: changeLogs/createTable.sql
