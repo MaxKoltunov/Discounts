@@ -21,3 +21,6 @@ spring:
       auto-offset-reset: earliest
       properties:
         spring.json.trusted.packages: '*'
+
+server:
+  port: 8081

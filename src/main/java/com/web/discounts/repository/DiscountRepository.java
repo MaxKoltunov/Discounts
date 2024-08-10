@@ -7,6 +7,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Optional;
+
 
 @Repository
 public interface DiscountRepository extends JpaRepository<Discount, Long> {
@@ -15,4 +17,7 @@ public interface DiscountRepository extends JpaRepository<Discount, Long> {
     @Transactional
     @Query(value = "DELETE FROM discountschema.discounts WHERE  type = :type AND productType = :productType", nativeQuery = true)
     void deleteByType(String type, String productType);
+
+    @Query(value = "SELECT * FROM discountschema.discounts WHERE id = :id", nativeQuery = true)
+    Optional<Discount> findById(Long id);
 }

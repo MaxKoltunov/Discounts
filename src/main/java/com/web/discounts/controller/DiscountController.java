@@ -30,7 +30,7 @@ public class DiscountController {
         discountService.addDiscount(dto.getType(), dto.getProductType());
         return "A new discount type has been added";
     }
-    // curl -X POST "http://localhost:8080/api/discounts/add" -H "Content-Type: application/json" -d "{\"type\":\"Seasonal\", \"productType\":\"bakery\"}"
+    // curl -X POST "http://localhost:8081/api/discounts/add" -H "Content-Type: application/json" -d "{\"type\":\"Seasonal\", \"productType\":\"bakery\"}"
 
 
     @DeleteMapping("/delete")
@@ -38,5 +38,5 @@ public class DiscountController {
         discountService.deleteDiscountByType(dto.getType(), dto.getProductType());
         return "Discount type has been deleted";
     }
-    // curl -X DELETE "http://localhost:8080/api/discounts/delete" -H "Content-Type: application/json" -d "{\"type\":\"Seasonal\", \"productType\":\"bakery\"}"
+    // curl -X DELETE "http://localhost:8081/api/discounts/delete" -H "Content-Type: application/json" -d "{\"type\":\"Seasonal\", \"productType\":\"bakery\"}"
 }
