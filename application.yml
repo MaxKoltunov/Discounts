@@ -17,7 +17,7 @@ spring:
   kafka:
     bootstrap-servers: localhost:9092
     consumer:
-      group-id: webApp
+      group-id: discounts
       auto-offset-reset: earliest
       properties:
         spring.json.trusted.packages: '*'
