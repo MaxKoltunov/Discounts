@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Optional;
 
 
@@ -20,4 +21,13 @@ public interface DiscountRepository extends JpaRepository<Discount, Long> {
 
     @Query(value = "SELECT * FROM discountschema.discounts WHERE id = :id", nativeQuery = true)
     Optional<Discount> findById(Long id);
+
+    @Query(value = "SELECT DISTINCT id FROM discountschema.discounts", nativeQuery = true)
+    List<Long> selectAllId();
+
+    @Query(value = "SELECT DISTINCT type FROM discountschema.discounts", nativeQuery = true)
+    List<String> selectAllType();
+
+    @Query(value = "SELECT DISTINCT product_type FROM discountschema.discounts", nativeQuery = true)
+    List<String> selectAllProductType();
 }

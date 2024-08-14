@@ -1,7 +1,7 @@
 package com.web.discounts.kafka.dto;
 
-import java.sql.Date;
 
+import java.sql.Timestamp;
 
 public class MessageDTO {
 
@@ -9,9 +9,9 @@ public class MessageDTO {
 
     private String name;
 
-    private Date startDate;
+    private Timestamp startDate;
 
-    private Date endDate;
+    private Timestamp endDate;
 
 
     public String getName() {
@@ -30,19 +30,19 @@ public class MessageDTO {
         this.discountId = discountId;
     }
 
-    public Date getStartDate() {
+    public Timestamp getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(Timestamp startDate) {
         this.startDate = startDate;
     }
 
-    public Date getEndDate() {
+    public Timestamp getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(Timestamp endDate) {
         this.endDate = endDate;
     }
 }
